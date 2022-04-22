@@ -88,7 +88,7 @@ Choose range datatime into : 2020-09-29 13:00:09 and 2020-09-29 13:09:16
 Insert first range value:  2020-09-29 13:04:09
 Insert second range value:  2020-09-29 13:09:16
 ```
-After setting the date range, the software will display in order: the list of detections in the indicated range, the projection of latitudes and longitudes on a map showing the flight path of the drone and finally it will display an image containing the drone(s) detected in the specified range.
+After setting the date range, the software will display in order: the list of detections in the indicated range, the projection of latitudes and longitudes on a map showing the flight path of the drone, for each type of drone the number of relative detections and finally it will display an image containing the drone(s) detected in the specified range.
 
 ![image](Utility/table_screen.PNG)
 ![image](Utility/map_screen.PNG)
