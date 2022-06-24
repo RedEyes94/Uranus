@@ -3,21 +3,308 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\1-DataCleaned\Scenario_2_2\[1]_DRONE_data_cleaned_2_2a.csv">
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_1a_test.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\1-DataCleaned\Scenario_3\[1]_ARCUS_data_cleaned_3.csv">
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_1b_test.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\3-DataMerged\[3-TEST]_MERGE_scenario_2c_test.csv">
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_2a_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_2b_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_2c_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_2d_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Test\missing_rate_VENUS_3a_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Training\missing_rate_VENUS_1_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Training\missing_rate_VENUS_1_2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Training\missing_rate_VENUS_1_3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Training\missing_rate_VENUS_1_4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\DataAnalysisResults\FeaturesMissingRate\Training\missing_rate_VENUS_3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MapsResults\PredictionDroneFlight\Test\LatitudeLongitudeData\LatitudeLongitude_test_prediction_scenario_3a.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MapsResults\PredictionDroneFlight\Training\LatitudeLongitudeData\lat_long_training_1_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MapsResults\PredictionDroneFlight\Training\LatitudeLongitudeData\lat_long_training_1_2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MapsResults\PredictionDroneFlight\Training\LatitudeLongitudeData\lat_long_training_1_4.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MergeResults\Test\[3-TEST]_MERGE_scenario_1a_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MergeResults\Test\[3-TEST]_MERGE_scenario_2a_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MergeResults\Test\[3-TEST]_MERGE_scenario_3a_test.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MergeResults\Training\[3]_MERGE_scenario_1_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\MergeResults\Training\[3]_MERGE_scenario_2_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\OutliersResults\ResultValues\Venus_Outliers_scenario_1_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\Altitude\altitude_data_result_1_3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\Altitude\altitude_data_result_3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\ConfusionMatrix.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_FPR_Mavic2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_FPR_MavicPro.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_FPR_Parrot.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_FPR_ProfessionalV2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_TPR_Mavic2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_TPR_MavicPro.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_TPR_Parrot.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\Inviati\ROC_curve_Data_TPR_ProfessionalV2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\ROC_curve_Data_FPR_Mavic2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\ROC_curve_Data_FPR_ProfessionalV2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\ROC_curve_Data_TPR_Mavic2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\DroneType\ROC_curve_Data_TPR_ProfessionalV2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\PredictionResults\Training\Speed\speed_data_result_3.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1\Scenario_1_1\2020-09-29_1_1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1\Scenario_1_1\ALVIRA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1\Scenario_1_1\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1\Scenario_1_3\ALVIRA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1\Scenario_1_3\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1\Scenario_1_4\DIANA_scenario.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -31,7 +318,63 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\Scenari\Scenario_1b_test\ALVIRA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_1b_test\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\Scenari\Scenario_2\Scenario_2_1\2020-09-30_2_1a.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2\Scenario_2_1\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2\Scenario_2_1\VENUS_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2\Scenario_2_2\ALVIRA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2\Scenario_2_2\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2a_test\ALVIRA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2a_test\DIANA_scenario.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -45,21 +388,98 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\Steps\Step_0\Alvira_Outliers_scenario_1_2.csv">
+        <entry key="\Scenari\Scenario_2c_test\DIANA_scenario.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\Steps\Step_0\Arcus_Outliers_scenario_1_2.csv">
+        <entry key="\Scenari\Scenario_2c_test\VENUS_scenario.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="\Steps\Step_0\Arcus_Outliers_scenario_2_1.csv">
+        <entry key="\Scenari\Scenario_2d_test\ARCUS_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_2d_test\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_3\Scenario_3\2020_29-09-2020-13-58-31-Flight-Airdata_corrected.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_3\Scenario_3\DIANA_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_3\Scenario_3\VENUS_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Scenari\Scenario_3a_test\VENUS_scenario.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\SubmissionFileTestResults\SubmissionFileScenario_1a.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\SubmissionFileTestResults\SubmissionFileScenario_2a.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\SubmissionFileTestResults\SubmissionFileScenario_2b.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\SubmissionFileTestResults\SubmissionFileScenario_2c.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\SubmissionFileTestResults\SubmissionFileScenario_2d.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\SubmissionFileTestResults\SubmissionFileScenario_3a.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

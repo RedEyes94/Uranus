@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+from matplotlib.legend_handler import HandlerLine2D
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import KFold
@@ -8,12 +9,12 @@ from math import sqrt
 import pickle
 
 
-def predict_altitude_per_scenario(scenari):
-    neigh = RandomForestRegressor(max_depth=10, random_state=0)
+def predict_altitude(scenari):
+    neigh = RandomForestRegressor(max_depth=10, random_state=42)
 
     for scn in scenari:
-        data = pd.read_csv('3-DataMerged/[3]_MERGE_scenario_' + scn + '.csv')
-
+        data = pd.read_csv('MergeResults/Training/[3]_MERGE_scenario_' + scn + '.csv')
+        data_bk = data
         scenario = data.reset_index()
         scenario = scenario.drop('index', axis=1)
 
@@ -43,7 +44,7 @@ def predict_altitude_per_scenario(scenari):
 
         X = np.c_[np.ones(X_scaled.shape[0]), X_scaled]
 
-        kf = KFold(n_splits=5, random_state=None)
+        kf = KFold(n_splits=5, random_state=42)
         scores = []
         X = pd.DataFrame(X)
         mae_rate = []
@@ -53,6 +54,29 @@ def predict_altitude_per_scenario(scenari):
             X_train, X_test = X.iloc[train_index, :], X.iloc[test_index, :]
             y_train, y_test = y_altitude[train_index], y_altitude[test_index]
 
+            import matplotlib.pyplot as plt
+            #################
+
+            train_results = []
+            test_results = []
+            list_nb_trees = [5, 10, 15, 30, 45, 60, 80, 100]
+
+            for nb_trees in list_nb_trees:
+                rf = RandomForestRegressor(n_estimators=nb_trees)
+                rf.fit(X_train, y_train)
+
+                train_results.append(mean_squared_error(y_train, rf.predict(X_train)))
+                test_results.append(mean_squared_error(y_test, rf.predict(X_test)))
+
+            line1, = plt.plot(list_nb_trees, train_results, color="r", label="Training Score")
+            line2, = plt.plot(list_nb_trees, test_results, color="g", label="Testing Score")
+
+            plt.legend(handler_map={line1: HandlerLine2D(numpoints=2)})
+            plt.ylabel('MSE')
+            plt.xlabel('n_estimators')
+            plt.show()
+
+            #################
             # neigh = RandomForestRegressor(max_depth=10, random_state=0)
             # neigh = SGDRegressor(max_iter=1000, tol=1e-3)
             # neigh = GradientBoostingRegressor(random_state=0)
@@ -84,12 +108,25 @@ def predict_altitude_per_scenario(scenari):
         print('MAE of each fold - {}'.format(mae_rate))
         print('MSE of each fold - {}'.format(mse_rate))
         print('----------------------'.format(mse_rate))
+        data['datetime(utc)'] = data_bk['datetime(utc)']
+        data = data.sort_values('datetime(utc)')
+        import matplotlib.pyplot as plt
+        x = data['datetime(utc)'].str.slice(10, 19)
+        data['altitude(m)'] = neigh.predict(X)
+        data.to_csv('PredictionResults/Training/Altitude/altitude_data_result_'+scn+'.csv')
 
-    with open('ModelliEstratti/model_altitude_FULL' + scn + '.pickle', 'wb') as f:
+        y = data['altitude(m)']
+        fig, ax = plt.subplots()
+        ax.plot(x, y)
+        ticks = ax.get_xticks()
+        ax.set_xticks([ticks[i] for i in [0, round(len(ticks) / 2), len(ticks) - 1]])
+        plt.savefig('PredictionResults/Training/Altitude/altitude_result_'+scn)
+
+    with open('Models/model_altitude.pickle', 'wb') as f:
         pickle.dump(neigh, f)
 
 
-def predict_altitude(scenari):
+'''def predict_altitude(scenari):
     neigh = RandomForestRegressor(max_depth=10, random_state=0)
 
     for scn in scenari:
@@ -164,5 +201,6 @@ def predict_altitude(scenari):
         print('MSE of each fold - {}'.format(mse_rate))
         print('----------------------'.format(mse_rate))
 
-        with open('ModelliEstratti/model_altitude' + scn + '.pickle', 'wb') as f:
+        with open('Models/model_altitude' + scn + '.pickle', 'wb') as f:
             pickle.dump(neigh, f)
+'''

@@ -10,7 +10,7 @@ to position, speed, and altitude. The observations, in the case of drone detecti
 (fixed or rotating wings) and the name of the potential detected UAS will be indicated 
 (e.g. DJI Mavic Pro).
 
-![image](ML-Design.jpg)
+![image](Utility/ML-Design.jpg)
 
 # Prerequisites
 
@@ -98,20 +98,23 @@ After setting the date range, the software will display in order: the list of de
 ## Repository Structure
 
 ```js
-├── 1-DataCleaned                        # Contains the files obtained from the data cleaning phase
-├── 2-AlviraClustering                   # Contains the files obtained from the data clustering phase on Alvira
-├── 3-ArcusClustering                    # Contains the files obtained from the data clustering phase on Arcus
-├── 4-DataMerged                         # Contains the files obtained from the data merge of all sensors and drone
-├── ModelliEstratti                      # Contains the models obtained from training phase
-├── Scensori                             # Contains the classes for Alvira, Arcus, Diana, Venus e Drone
-├── Steps                                # Contains the classes for Alvira, Arcus, Diana, Venus e Drone
+├── 1-AlviraClusteringResults            # Contains the files obtained from the data clustering phase on Alvira
+├── 2-AnovaResults                       # Contains the files obtained from the Anova analysis
+├── 3-DataAnalysisResults                # Contains the files obtained from the data Analysis (heatmap, histogram, missing rata)
+├── 4-DataCleanResults                   # Contains the files obtained from the data cleaning 
+├── 5-MapResults                         # Contains the map results of real drone flight and prediction of drone flight in test/training scenarios
+├── 6-MergeResults                       # Contains the files obtained from the merge of Alvira, Arcus, Diana, Venus e Drone datasets
+├── 7-Models                             # Contains the extracted models 
+├── 8-OutliersResults                    # Contains the files obtained from the outliers analysis 
+├── 9-PredictionResults                  # Contains the files obtained from the prediction for training and test scenarios 
+├── 10-Scenari                           # Contains the raw files related to each scenario (train/test) with sensors and drone data 
+├── 11-Sensors                           # Contains the classes of sensors 
+├── 12-Steps                             # Contains all the step followed by Uranus
 │   ├── Step_0                           # Contains py files for Outliers detection, Data analisys and Clean
 │   ├── Step_1                           # Contains py files for clustering 
-│   │   ├── AlviraMapsClustering         # Contains csv and png files related to clustering results  
 │   ├── Step_2                           # Contains py files for merge all sensors files
 │   ├── Step_3                           # Contains py files for anova analisys, creation of learning models  
-│   ├── Step_4                           # Contains py files a for testing models generated in Step 3  
-│   │   ├── Latitude_Longitude_predette  # Contains csv and png files related to predict results
+│   ├── Step_4                           # Contains py files for testing models generated in Step 3  
 ├── SubmissionFileTestResults            # Contains csv files genereted after prediction in Step 4  
 ├── Utility                              # Contains py files with some useful functions (e.g. GPS)
 ```

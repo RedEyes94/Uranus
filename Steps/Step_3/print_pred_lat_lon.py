@@ -21,11 +21,11 @@ def print_lat_lon_predette(scenari):
     for scenario in scenari:
         print(' Stampo su mappa il volo dello scenario : ' + scenario)
 
-        data_lat = pd.read_csv('Steps/Step_3/Prediction/LAT_pred_scenario_' + scenario + '.csv',
+        data_lat = pd.read_csv('PredictionResults/Training/Latitude_Longitude/latitude_pred_scenario_' + scenario + '.csv',
                                delimiter=',')
         data_lat = data_lat.rename(columns={'0': 'latitude'})
 
-        data_lon = pd.read_csv('Steps/Step_3/Prediction/LON_pred_scenario_' + scenario + '.csv',
+        data_lon = pd.read_csv('PredictionResults/Training/Latitude_Longitude/longitude_pred_scenario_' + scenario + '.csv',
                                delimiter=',')
         data_lon = data_lon.rename(columns={'0': 'longitude'})
 
@@ -55,13 +55,13 @@ def print_on_map(data, scenario):
     data['latitude'].map('{:,.6f}'.format)
     data['longitude'].map('{:,.6f}'.format)
 
-    data.to_csv('Steps/Step_3/Prediction_Lat_Lon/lat_long_' + scenario + '.csv', header=False,
+    data.to_csv('MapsResults/PredictionDroneFlight/Training/LatitudeLongitudeData/lat_long_training_' + scenario + '.csv', header=False,
                 index=False)
 
-    vis = GPSVis(data_path='Steps/Step_3/Prediction_Lat_Lon/lat_long_' + scenario + '.csv',
+    vis = GPSVis(data_path='MapsResults/PredictionDroneFlight/Training/LatitudeLongitudeData/lat_long_training_' + scenario + '.csv',
                  map_path='Utility/map1.png',  # Path to map downloaded from the OSM.
                  points=(
                      51.5246, 5.8361, 51.5103, 5.8752))  # Two coordinates of the map (upper left, lower right)
 
     vis.create_image(color=(0, 0, 255), width=3)  # Set the color and the width of the GNSS tracks.
-    vis.plot_map(output='save', save_as='Steps/Step_3/Prediction/Prediction_Lat_Lon_scenario_' + scenario)
+    vis.plot_map(output='save', save_as='MapsResults/PredictionDroneFlight/Training/Figure/Maps_prediction_scenario_' + scenario)

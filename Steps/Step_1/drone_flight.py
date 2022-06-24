@@ -38,13 +38,13 @@ def print_on_map(data, scenario):
     data['latitude'].map('{:,.6f}'.format)
     data['longitude'].map('{:,.6f}'.format)
 
-    data.to_csv('Steps/Step_1/AlviraMapsClustering/alvira_lat_long_' + scenario + '.csv', header=False,
+    data.to_csv('MapsResults/RealDroneFlightTrainingScenarios/LatitudeLongitudeData/alvira_lat_long_' + scenario + '.csv', header=False,
                 index=False)
 
-    vis = GPSVis(data_path='Steps/Step_1/AlviraMapsClustering/alvira_lat_long_' + scenario + '.csv',
+    vis = GPSVis(data_path='MapsResults/PredictionDroneFlight/Training/LatitudeLongitudeData/lat_long_training_1_1.csv',
                  map_path='Utility/map1.png',  # Path to map downloaded from the OSM.
                  points=(
                      51.5246, 5.8361, 51.5103, 5.8752))  # Two coordinates of the map (upper left, lower right)
 
     vis.create_image(color=(0, 0, 255), width=3)  # Set the color and the width of the GNSS tracks.
-    vis.plot_map(output='save', save_as='Drone_flight_scenario_' + scenario)
+    vis.plot_map(output='save', save_as='MapsResults/RealDroneFlightTrainingScenarios/Figure/Drone_flight_scenario_' + scenario)

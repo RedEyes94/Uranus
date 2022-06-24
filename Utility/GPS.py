@@ -2,7 +2,8 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image, ImageDraw
-
+import warnings
+warnings.filterwarnings("ignore")
 
 class GPSVis(object):
     """
@@ -48,8 +49,8 @@ class GPSVis(object):
 
         axis1.set_xlabel('Longitude')
         axis1.set_ylabel('Latitude')
-        '''axis1.set_xticklabels(self.x_ticks)
-        axis1.set_yticklabels(self.y_ticks)'''
+        axis1.set_xticklabels([5.8426,5.8491,5.8557,5.8622,5.8687,5.8752,5.8817,5.8882,5.8947,5.9012])
+        axis1.set_yticklabels(self.y_ticks)
         axis1.grid()
         if output == 'save':
             plt.savefig(save_as)

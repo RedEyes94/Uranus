@@ -1,20 +1,10 @@
 import sys
 from datetime import datetime
-from tabulate import tabulate
 import pandas as pd
 from Utility.GPS import GPSVis
 from Utility.print_test_console import print_on_test_map
 from tkinter import *
 from tkinter import messagebox
-
-# GUI
-#e = Entry(root, width=50)
-#e.pack()
-
-
-#messagebox.showinfo("ShowInfo", "URANUS started!")
-
-#root.mainloop()
 
 # GUI
 print('')
@@ -44,31 +34,31 @@ print('')
 print('The chosen scenario is : ' + scenario)
 print('')
 
-if scenario == '1a':
+if scenario == '1':
     range1 = datetime.strptime('2020-09-29 13:00:09', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-29 13:09:16', '%Y-%m-%d %H:%M:%S')
 
-elif scenario == '1b':
+elif scenario == '2':
     range1 = datetime.strptime('2020-09-29 12:29:00', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-29 12:43:06', '%Y-%m-%d %H:%M:%S')
 
-elif scenario == '2a':
+elif scenario == '3':
     range1 = datetime.strptime('2020-09-30 12:00:40', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-30 12:19:40', '%Y-%m-%d %H:%M:%S')
 
-elif scenario == '2b':
+elif scenario == '4':
     range1 = datetime.strptime('2020-09-30 12:24:45', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-30 12:38:03', '%Y-%m-%d %H:%M:%S')
 
-elif scenario == '2c':
+elif scenario == '5':
     range1 = datetime.strptime('2020-09-30 12:44:16', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-30 13:02:43', '%Y-%m-%d %H:%M:%S')
 
-elif scenario == '2d':
+elif scenario == '6':
     range1 = datetime.strptime('2020-09-30 13:04:06', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-30 13:14:03', '%Y-%m-%d %H:%M:%S')
 
-elif scenario == '3a':
+elif scenario == '7':
     range1 = datetime.strptime('2020-09-29 14:12:20', '%Y-%m-%d %H:%M:%S')
     range2 = datetime.strptime('2020-09-29 14:25:11', '%Y-%m-%d %H:%M:%S')
 
@@ -87,11 +77,13 @@ if second > range2:
     print('Error : The upper datetime limit has been violated')
     quit()
 
-data = pd.read_csv('SubmissionFileTestResults/SubmissionFileScenario_' + scenario + '.csv')
+data = pd.read_csv('SubmissionFileTestResults/SubmissionFileScenario_' + scenari[int(scenario)-1] + '.csv')
 data['TrackDateTimeUTC'] = pd.to_datetime(data['TrackDateTimeUTC'], format='%Y-%m-%d %H:%M:%S')
 data = data[data['TrackDateTimeUTC'] >= first]
 data = data[data['TrackDateTimeUTC'] <= second]
-data = data.sort_values(by=['TrackDateTimeUTC'], ascending=False)
+data = data.sort_values(by=['TrackDateTimeUTC'], ascending=True)
+data = data.reset_index()
+data = data.drop('index', axis=1)
 
 import tkinter as tk
 from tkinter import ttk
@@ -101,7 +93,7 @@ df = pd.DataFrame(data)
 cols = list(df.columns)
 root = Tk()
 root.title('Uranus')
-root.iconbitmap('uranus.ico')
+root.iconbitmap('Utility/uranus.ico')
 tree = ttk.Treeview(root, height=50, selectmode="extended")
 tree.pack()
 
@@ -110,9 +102,10 @@ tree["columns"] = cols
 for i in cols:
     tree.column(i, anchor="w")
     tree.heading(i, text=i, anchor='w')
-
+idx = df.shape[0]
 for index, row in df.iterrows():
-    tree.insert("", 0, text=index, values=list(row))
+    tree.insert("", 0, text=idx, values=list(row))
+    idx -= 1
 
 root.mainloop()
 
@@ -130,7 +123,7 @@ cols = list(df.columns)
 
 root = Tk()
 root.title('Uranus')
-root.iconbitmap('uranus.ico')
+root.iconbitmap('Utility/uranus.ico')
 tree = ttk.Treeview(root, height=10, selectmode="extended")
 tree.pack()
 
@@ -145,7 +138,6 @@ for index, row in df.iterrows():
 
 root.mainloop()
 
-#print(tabulate(data_class, headers='keys', tablefmt='psql'))
 print('***************************************************')
 
 from tkinter import *
@@ -156,8 +148,8 @@ for drone in detected_drone:
 
         root = Tk()
         root.title('Uranus')
-        root.iconbitmap('uranus.ico')
-        image = ImageTk.PhotoImage(Image.open(r'drone_images/PARROT_DISCO_[1].jpeg'))
+        root.iconbitmap('Utility/uranus.ico')
+        image = ImageTk.PhotoImage(Image.open(r'Utility/drone_images/PARROT_DISCO_[1].jpeg'))
 
         Label(root, text='Estimator accuracy : 0.95', image=image, compound='bottom').pack()
 
@@ -166,8 +158,8 @@ for drone in detected_drone:
 
         root = Tk()
         root.title('Uranus')
-        root.iconbitmap('uranus.ico')
-        image = ImageTk.PhotoImage(Image.open(r"drone_images/DJI_MAVIC_PRO_[1].png"))
+        root.iconbitmap('Utility/uranus.ico')
+        image = ImageTk.PhotoImage(Image.open(r"Utility/drone_images/DJI_MAVIC_PRO_[1].png"))
 
         Label(root, text='Estimator accuracy : 0.95', image=image, compound='bottom').pack()
 
@@ -176,9 +168,9 @@ for drone in detected_drone:
 
         root = Tk()
         root.title('Uranus')
-        root.iconbitmap('uranus.ico')
+        root.iconbitmap('Utility/uranus.ico')
 
-        image = ImageTk.PhotoImage(Image.open(r'drone_images/DJI_MAVIC_2_[1].png'))
+        image = ImageTk.PhotoImage(Image.open(r'Utility/drone_images/DJI_MAVIC_2_[1].png'))
 
         Label(root, text='Estimator accuracy : 0.95', image=image, compound='bottom').pack()
 
@@ -187,9 +179,9 @@ for drone in detected_drone:
 
         root = Tk()
         root.title('Uranus')
-        root.iconbitmap('uranus.ico')
+        root.iconbitmap('Utility/uranus.ico')
 
-        image = ImageTk.PhotoImage(Image.open(r'drone_images/DJI_PHANTOM_[1].png'))
+        image = ImageTk.PhotoImage(Image.open(r'Utility/drone_images/DJI_PHANTOM_[1].png'))
 
         Label(root, text='Estimator accuracy : 0.95', image=image, compound='bottom').pack()
 
